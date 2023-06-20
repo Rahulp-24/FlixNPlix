@@ -1,0 +1,42 @@
+<div class="sec1">
+<div class="position-absolute top-50 start-50 translate-middle ">
+    <div class="container card border border-4 shadow -5">
+
+        <form [formGroup]="loginForm" class="md-5 p-5">
+            <h3 class="text-center">Login</h3>
+            <div class="form-group mt-3">
+                <label>Email</label>
+                <input type="email" formControlName="userEmail" class="form-control"
+                    placeholder="Enter your Email Id">
+                <div *ngIf="loginForm.controls['userEmail'].invalid && (loginForm.controls['userEmail'].dirty || loginForm.controls['userEmail'].touched)"
+                    class="text-danger p-1 border-0 dark-light">
+                    <div *ngIf="loginForm.controls['userEmail'].invalid">
+                        <small>Email is reqired.</small>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <label>Password</label>
+                    <input type="password" formControlName="userPassword" class="form-control"
+                        placeholder="Enter your password">
+                    <div *ngIf="loginForm.controls['userPassword'].invalid && (loginForm.controls['userPassword'].dirty || loginForm.controls['userPassword'].touched)"
+                        class="text-danger p-1 border-0 dark-light">
+                        <div *ngIf="loginForm.controls['userPassword'].invalid">
+                            <small>password is reqired.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <span>
+                    Create new account <a class="dark-light m-1" style="cursor: pointer;" (click)="goSignUp()">Sign up</a>
+                </span>
+                <h3>{{errorMessage}}</h3>
+                <!-- <p>Login Succefull</p> -->
+                <br>
+                <div class="text-center">
+                    <button type="submit " (click)="getMeLogedIn()" [disabled]='!loginForm.valid' class="btn btn-success mt-3">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

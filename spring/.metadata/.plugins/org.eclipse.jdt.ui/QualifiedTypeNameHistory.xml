@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.CollectionId"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.Database.backend.service.UserService"/>
+    <fullyQualifiedTypeName name="com.Database.backend.service.BankService"/>
+    <fullyQualifiedTypeName name="com.Database.backend.service.TransactionService"/>
+    <fullyQualifiedTypeName name="com.Database.backend.service.WatchlistService"/>
+    <fullyQualifiedTypeName name="com.Database.backend.service.SubService"/>
+    <fullyQualifiedTypeName name="com.Database.backend.entity.User"/>
+    <fullyQualifiedTypeName name="com.Database.backend.entity.BankDetails"/>
+    <fullyQualifiedTypeName name="com.Database.backend.entity.Transaction"/>
+    <fullyQualifiedTypeName name="com.Database.backend.entity.Subscription"/>
+    <fullyQualifiedTypeName name="com.Database.backend.entity.Watchlist"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,63 @@
+<div class="sec1">
+<div class="position-absolute top-50 start-50 translate-middle p-5">
+    <div class="container-flex card border border-4 shadow -5 p-5">
+    
+        <form [formGroup]="signUpForm" >
+            <h3>Sign up</h3>
+            <div class="form-group mt-3 ">
+                <label>First Name</label>
+                <input type="text"  formControlName="firstName" class="form-control" placeholder="Enter your full name">
+                <div *ngIf="signUpForm.controls['firstName'].invalid && (signUpForm.controls['firstName'].dirty || signUpForm.controls['firstName'].touched)"
+                        class="text-danger p-1 border-0 dark-light">
+                        <div *ngIf="signUpForm.controls['firstName'].invalid">
+                            <small>First name is reqired.</small>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group mt-3 ">
+                <label>Last Name</label>
+                <input type="text"  formControlName="lastName" class="form-control" placeholder="Enter your full name">
+                <div *ngIf="signUpForm.controls['lastName'].invalid && (signUpForm.controls['lastName'].dirty || signUpForm.controls['lastName'].touched)"
+                        class="text-danger p-1 border-0 dark-light">
+                        <div *ngIf="signUpForm.controls['lastName'].invalid">
+                            <small>Last name is reqired.</small>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group mt-3">
+                <label>Email</label>
+                <input type="Email" formControlName="userEmail" class="form-control" placeholder="Enter your email">
+                <div *ngIf="signUpForm.controls['userEmail'].invalid && (signUpForm.controls['userEmail'].dirty || signUpForm.controls['userEmail'].touched)"
+                        class="text-danger p-1 border-0 dark-light">
+                        <div *ngIf="signUpForm.controls['userEmail'].invalid">
+                            <small>Valid email is required.</small>
+                        </div>
+                    </div>
+            </div>
+            
+
+            <div class="form-group mt-3">
+                <label>Password</label>
+                <input type="password" formControlName="userPassword"  class="form-control" placeholder="Enter new password">
+                <div *ngIf="signUpForm.controls['userPassword'].invalid && (signUpForm.controls['userPassword'].dirty || signUpForm.controls['userPassword'].touched)"
+                        class="text-danger p-1 border-0 dark-light">
+                        <div *ngIf="signUpForm.controls['userPassword'].invalid">
+                            <small>Password is reqired.</small>
+                        </div>
+                    </div>
+            </div>
+            
+    
+        </form>
+        <span>
+            Already have account 
+            <a (click)="goToLogin()" style="cursor: pointer;" class="dark-light">Log in</a>
+        </span>
+        <p>{{errorMessage}}</p>
+        
+        <br>
+        <button type="submit"  [disabled]='!signUpForm.valid' (click)="RegisterUser()"  class="btn btn-success mt-3" >Register</button>
+        
+    </div>
+</div>
+    

@@ -1,0 +1,7 @@
+127.0.0.1 - - [06/Apr/2023:11:32:00 +0530] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [06/Apr/2023:11:41:45 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:11:41:45 +0530] "GET /backend/WEB-INF/classes/com/Database/backend/BackendApplication.java HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:11:41:45 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+127.0.0.1 - - [06/Apr/2023:11:43:43 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:11:43:44 +0530] "GET /backend/WEB-INF/classes/com/Database/backend/BackendApplication.java HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:11:47:09 +0530] "POST /addUser HTTP/1.1" 404 759

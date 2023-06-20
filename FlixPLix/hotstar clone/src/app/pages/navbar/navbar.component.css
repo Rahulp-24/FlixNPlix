@@ -1,0 +1,14 @@
+.navbar .navbar-brand
+{
+    color: #04ef0c;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+    color: #04ef0c;
+}
+.nav-item .nav-link img{
+    max-width: 25px;
+    
+}

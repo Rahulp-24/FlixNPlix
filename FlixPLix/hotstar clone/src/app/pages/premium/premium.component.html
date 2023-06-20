@@ -1,0 +1,156 @@
+<app-navbar></app-navbar>
+<div class="m-5 p-4">
+    <h5 class="text-center text-danger">Choose your plans</h5>
+    <div class="mt-3 p-4  ">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col p-2 h-90">
+                <div class="card bg h-90 p-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1473/1473504.png" class="card-img-top"
+                        alt="No Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Gold</h5>
+                        <p class="card-text text-center">
+                            500/- 20 minutes
+                        </p>
+                        <div>
+                            <ul>
+                                <li>All movies, webseries, tv channel</li>
+                                <li>validity - 20 minutes </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-8">
+                        <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#paymentPage" 
+                            type="button">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-2 h-90">
+                <div class="card bg h-90 p-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5278/5278673.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Platinum</h5>
+                        <p class="card-text text-center">
+                            2000/- 1 hour
+                        </p>
+                        <div>
+                            <ul>
+                                <li>All movies, webseries, tv channel</li>
+                                <li>validity - 1 hour </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-8">
+                        <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#paymentPage" 
+                            type="button">Buy</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col p-2 h-90">
+                <div class="card bg h-90 p-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/432/432492.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Diamond</h5>
+                        <p class="card-text text-center">
+                            10000/- 1 month
+                        </p>
+                        <div>
+                            <ul>
+                                <li>All movies, webseries, tv channel</li>
+                                <li>validity - 1 month </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-8">
+                        <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#paymentPage" 
+                            type="button">Buy</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="paymentPage" tabindex="-1" aria-labelledby="paymentPage" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 " id="exampleModalLabel">Enter the payment details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-1 p-1">
+                <div class="card m-2 p-2">
+                    <form [formGroup]="paymentForm">
+                        <div class="form-group">
+                            <label for="bank">Choose bank name:</label>
+
+                            <select formControlName="bankName" class="form-control" id="cars">
+                                <option value="SBI">SBI</option>
+                                <option value="BOB">BOB</option>
+                                <option value="Axis bank">Axis bank</option>
+                                <option value="HDFC">HDFC</option>
+                            </select>
+                            <div *ngIf="paymentForm.controls['bankName'].invalid && (paymentForm.controls['bankName'].dirty || paymentForm.controls['bankName'].touched)"
+                                class="text-danger p-1 border-0 dark-light">
+                                <div *ngIf="paymentForm.controls['bankName'].invalid">
+                                    <small>Select Bank Name.</small>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Account Number</label>
+                            <input formControlName="accountNumber" type="tel" class="form-control">
+                            
+                            <div *ngIf="paymentForm.controls['accountNumber'].invalid && (paymentForm.controls['accountNumber'].dirty || paymentForm.controls['accountNumber'].touched)"
+                                class="text-danger p-1 border-0 dark-light">
+                                <div >
+                                    <small>Enter 14 digit account number.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input formControlName="cvv" type="tel" class="form-control">
+                            <div *ngIf="paymentForm.controls['cvv'].invalid && (paymentForm.controls['cvv'].dirty || paymentForm.controls['cvv'].touched)"
+                                class="text-danger p-1 border-0 dark-light">
+                                <div *ngIf="paymentForm.controls['cvv'].invalid">
+                                    <small>Enter 3 digit CVV.</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        <div class="form-group">
+                            <label for="bank">Choose plan name:</label>
+
+                            <select formControlName="planName" class="form-control" id="cars">
+                                <option value="Gold">Gold - 500/-</option>
+                                <option value="Platinum">Platinum - 2000/-</option>
+                                <option value="Diamond">Diamond - 10000/-</option>
+                                
+                            </select>
+                            <div *ngIf="paymentForm.controls['planName'].invalid && (paymentForm.controls['planName'].dirty || paymentForm.controls['planName'].touched)"
+                                class="text-danger p-1 border-0 dark-light">
+                                <div *ngIf="paymentForm.controls['planName'].invalid">
+                                    <small>Select Plan.</small>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <p>{{planStaus}}</p>
+                        <!-- <h2>{{paymentForm.valid}}</h2> -->
+                        <button  (click)="proccedPayment()" [disabled]='!paymentForm.valid' class="btn btn-primary mr-2 mt-4"  type="submit">Submit</button>
+                        
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
